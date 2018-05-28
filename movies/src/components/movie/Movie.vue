@@ -25,70 +25,7 @@
                             </a>
                             <a href="javascript:;" class="l_mover_buy">购票</a>
                         </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img.png" alt=""></div>
-                                <div class="l_mover_right">
-                                    <div class="l_flex_item">
-                                        <div class="l_mover_name">
-                                            雷神3：诸神黄昏
-                                        </div>
-                                        <p class="rfs14 c_666">观众评分 <span class="c_ff9 rfs16 v-align-initial">8.9</span></p>
-                                        <p class="rfs14 c_999">动作/冒险/喜剧</p>
-                                        <p class="rfs14 c_999">主演：克里斯·海姆斯沃斯,汤姆·希德勒斯顿,凯...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:;" class="l_mover_buy">购票</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img.png" alt=""></div>
-                                <div class="l_mover_right">
-                                    <div class="l_flex_item">
-                                        <div class="l_mover_name">
-                                            雷神3：诸神黄昏
-                                        </div>
-                                        <p class="rfs14 c_666">观众评分 <span class="c_ff9 rfs16 v-align-initial">8.9</span></p>
-                                        <p class="rfs14 c_999">动作/冒险/喜剧</p>
-                                        <p class="rfs14 c_999">主演：克里斯·海姆斯沃斯,汤姆·希德勒斯顿,凯...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:;" class="l_mover_buy">购票</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img.png" alt=""></div>
-                                <div class="l_mover_right">
-                                    <div class="l_flex_item">
-                                        <div class="l_mover_name">
-                                            雷神3：诸神黄昏
-                                        </div>
-                                        <p class="rfs14 c_666">观众评分 <span class="c_ff9 rfs16 v-align-initial">8.9</span></p>
-                                        <p class="rfs14 c_999">动作/冒险/喜剧</p>
-                                        <p class="rfs14 c_999">主演：克里斯·海姆斯沃斯,汤姆·希德勒斯顿,凯...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:;" class="l_mover_buy">购票</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img.png" alt=""></div>
-                                <div class="l_mover_right">
-                                    <div class="l_flex_item">
-                                        <div class="l_mover_name">
-                                            雷神3：诸神黄昏
-                                        </div>
-                                        <p class="rfs14 c_666">观众评分 <span class="c_ff9 rfs16 v-align-initial">8.9</span></p>
-                                        <p class="rfs14 c_999">动作/冒险/喜剧</p>
-                                        <p class="rfs14 c_999">主演：克里斯·海姆斯沃斯,汤姆·希德勒斯顿,凯...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:;" class="l_mover_buy">购票</a>
-                        </li>
+                       
                     </ul>
                 </div>
                 <div class="over" style="display: none">
@@ -109,71 +46,7 @@
                             </a>
                             <a href="javascript:;" class="l_mover_presale">预售</a>
                         </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img2.png" alt=""></div>
-                                <div class="l_mover_right">
-                                    <div class="l_flex_item">
-                                        <div class="l_mover_name">
-                                            刺杀盖世太保
-                                        </div>
-                                        <p class="rfs14 c_666">2017年11月27日上映</p>
-                                        <p class="rfs14 c_999">剧情/战争/历史</p>
-                                        <p class="rfs14 c_999">主演：杰森·克拉克,裴淳华,杰克·奥康奈尔,米娅...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:;" class="l_mover_presale">预售</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img2.png" alt=""></div>
-                                <div class="l_mover_right">
-                                    <div class="l_flex_item">
-                                        <div class="l_mover_name">
-                                            刺杀盖世太保
-                                        </div>
-                                        <p class="rfs14 c_666">2017年11月27日上映</p>
-                                        <p class="rfs14 c_999">剧情/战争/历史</p>
-                                        <p class="rfs14 c_999">主演：杰森·克拉克,裴淳华,杰克·奥康奈尔,米娅...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:;" class="l_mover_presale">预售</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img2.png" alt=""></div>
-                                <div class="l_mover_right">
-                                    <div class="l_flex_item">
-                                        <div class="l_mover_name">
-                                            刺杀盖世太保
-                                        </div>
-                                        <p class="rfs14 c_666">2017年11月27日上映</p>
-                                        <p class="rfs14 c_999">剧情/战争/历史</p>
-                                        <p class="rfs14 c_999">主演：杰森·克拉克,裴淳华,杰克·奥康奈尔,米娅...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:;" class="l_mover_presale">预售</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img2.png" alt=""></div>
-                                <div class="l_mover_right">
-                                    <div class="l_flex_item">
-                                        <div class="l_mover_name">
-                                            刺杀盖世太保
-                                        </div>
-                                        <p class="rfs14 c_666">2017年11月27日上映</p>
-                                        <p class="rfs14 c_999">剧情/战争/历史</p>
-                                        <p class="rfs14 c_999">主演：杰森·克拉克,裴淳华,杰克·奥康奈尔,米娅...</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript:;" class="l_mover_presale">预售</a>
-                        </li>
-
+                        
                     </ul>
                 </div>
             </div>
