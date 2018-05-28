@@ -1,15 +1,12 @@
 <template>
-  <div class="hello">
-    <h1></h1>
-    <h2>Essential Links</h2>
-
-    <h2>Ecosystem</h2>
+  <div class="Mine">
+    我的
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Index',
+  name: 'Mine',
   data () {
     return {
       msg: ''

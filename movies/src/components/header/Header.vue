@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="header">
     <h1></h1>
     <h2>Essential Links</h2>
 
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'Index',
+  name: 'Header',
   data () {
     return {
       msg: ''
