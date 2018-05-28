@@ -68,3 +68,59 @@ div,a,span{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 
 span.icon_stars{display:inline-block;width:0.267rem;height:0.267rem;background:url(../images/d_icon_xingxing_small_g.png) no-repeat center center/100% 100%;padding:0;margin:0 0.05rem;vertical-align:middle;}
 span.icon_stars.active{background:url(../images/d_icon_xingxing_small_y.png) no-repeat center center/100% 100%;}
+
+/*公共按钮开始*/
+.l_btn{
+    font-size:.3381rem;
+    padding: 0 2px;
+    line-height: .6rem;
+    display:inline-block;
+    width:1.2rem;
+    text-align: center;
+}
+.l_btn_block{
+    font-size: 0.48rem;
+    width: 100%;
+    text-align: center;
+    line-height: .8rem;
+    padding: 5px 0;
+    display: block;
+}
+/*公共按钮结束*/
+
+/*公共按钮颜色开始*/
+.l_red_bor_btn{
+    color: #e64239;
+    background-color: #fff;
+    border: 1px solid #e64239;
+}
+.l_red_bg_btn{
+    color: #fff;
+    background-color: #e64239;
+    border: 1px solid #e64239;
+}
+/*公共按钮颜色结束*/
+
+
+
+/*公共样式开始*/
+.c_ff9{color: #ff953f}       /*点睛色橙色*/
+.c_262{color: #262626}       /****黑色***/
+.c_63a{color: #63acef}       /****蓝色***/
+.c_e64{color: #e64239}       /****红色***/
+.c_d5d{color: #d5d3d5}       /****灰色***/
+.c_ccc{color: #cccccc}       /****灰色***/
+.db{display: block}
+.rh40{height: 1.066rem}
+.pull-left{float: left}
+.pull-right{float: right}
+.re{position: relative}
+.text_em 	{text-indent:2em;}
+.bo_r4{border-radius: 4px;}
+.inline-block{display: inline-block}
+.v-align-initial{vertical-align: initial;}
+.bg_faf{background-color: #fafafa}         /*浅灰色*/
+.list-unstyled{padding-left: 0;list-style: none;margin: 0}
+.text_over 	{overflow: hidden;white-space:nowrap;text-overflow:ellipsis;}
+.col-lzx-6{width: 50%;float: left;position: relative;padding-left: 15px;padding-right: 15px;}
+/*公共样式结束*/
