@@ -13,6 +13,21 @@ const portfinder = require('portfinder')
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
+//mock数据
+const express = require("express")
+
+//创建express实例
+const app = express()
+
+//引入数据
+var movie_now = require("../data/movie_now.json")
+var movie_will = require("../data/movie_will.json")
+var movie_will_hot = require("../data/movie_will_hot.json")
+var cinema = require("../data/cinema.json")
+var filter_cinemas = require("../data/filter_cinemas.json")
+var cities = require("../data/cities.json")  
+var my_order_list = require("../data/my_order_list.json")
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
@@ -42,6 +57,30 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    //接口引入
+    before(app){
+      app.get('/api/movie_now',(req,res) => {
+        res.json(movie_now)
+      })
+      app.get('/api/movie_will',(req,res) => {
+        res.json(movie_will)
+      })
+      app.get('/api/movie_will_hot',(req,res) => {
+        res.json(movie_will_hot)
+      })
+      app.get('/api/cinema',(req,res) => {
+        res.json(cinema)
+      })
+      app.get('/api/filter_cinemas',(req,res) => {
+        res.json(filter_cinemas)
+      })
+      app.get('/api/cities',(req,res) => {
+        res.json(cities)
+      })
+      app.get('/api/my_order_list',(req,res) => {
+        res.json(my_order_list)
+      })
     }
   },
   plugins: [

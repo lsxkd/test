@@ -3,23 +3,25 @@
     <main>
         <div class="l_movie_tab_content">
             <ul class="list-unstyled l_tab_nav over solid_b l_tab_ul">
-                <li class="col-lzx-6 active rfs14 text-center rpd0"><a href="javascript:void(0)">正在热映</a></li>
-                <li class="col-lzx-6 rfs14 text-center rpd0"><a href="javascript:void(0)">即将上映</a></li>
+                <li class="col-lzx-6 rfs14 text-center rpd0"><a :class="{'active':selectType==0}" @click="selectTypeFn(0)" href="javascript:void(0)">正在热映</a></li>
+                <li class="col-lzx-6 rfs14 text-center rpd0"><a :class="{'active':selectType==1}" @click="selectTypeFn(1)" href="javascript:void(0)">即将上映</a></li>
             </ul>
             <div class="l_tab_pane l_tab_cont">
-                <div class="over">
+                <div class="over" v-show="selectType==0">
                     <ul class="list-unstyled l_mover_list_ul">
-                        <li>
+                        <li v-for="(movie,index) in movieList" :key="index">
                             <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img.png" alt=""></div>
+                                <div class="l_mover_img"><img :src="movie.img" ></div>
                                 <div class="l_mover_right">
                                     <div class="l_flex_item">
                                         <div class="l_mover_name">
-                                            雷神3：诸神黄昏
+                                            {{movie.nm}}
                                         </div>
-                                        <p class="rfs14 c_666">观众评分 <span class="c_ff9 rfs16 v-align-initial">8.9</span></p>
-                                        <p class="rfs14 c_999">动作/冒险/喜剧</p>
-                                        <p class="rfs14 c_999">主演：克里斯·海姆斯沃斯,汤姆·希德勒斯顿,凯...</p>
+                                        <p class="rfs14 c_666">观众评分 <span class="c_ff9 rfs16 v-align-initial">{{movie.sc}}</span></p>
+                                        
+                                        <!-- <p class="rfs14 c_999">动作/冒险/喜剧</p> -->
+                                        <p class="rfs14 c_999">主演：{{movie.star}}</p>
+                                        <p class="rfs14 c_999">{{movie.showInfo}}</p>
                                     </div>
                                 </div>
                             </a>
@@ -28,19 +30,20 @@
                        
                     </ul>
                 </div>
-                <div class="over" style="display: none">
+                <div class="over"  v-show="selectType==1">
                     <ul class="list-unstyled l_mover_list_ul">
-                        <li>
+                        <li v-for="(movies,index) in commingList" :key="index">
                             <a href="javascript:;">
-                                <div class="l_mover_img"><img src="images/l_data_img2.png" alt=""></div>
+                                <div class="l_mover_img"><img :src="movies.img"></div>
                                 <div class="l_mover_right">
                                     <div class="l_flex_item">
                                         <div class="l_mover_name">
-                                            刺杀盖世太保
+                                            {{movies.nm}}
                                         </div>
-                                        <p class="rfs14 c_666">2017年11月27日上映</p>
-                                        <p class="rfs14 c_999">剧情/战争/历史</p>
-                                        <p class="rfs14 c_999">主演：杰森·克拉克,裴淳华,杰克·奥康奈尔,米娅...</p>
+                                        <p class="rfs14 c_666">{{movies.showInfo}}</p>
+                                        <!-- <p class="rfs14 c_999">剧情/战争/历史</p> -->
+                                        <p class="rfs14 c_666"><span class="c_ff9 rfs16 v-align-initial">{{movies.wish}}</span>人想看 </p>
+                                        <p class="rfs14 c_999">主演：{{movies.star}}</p>
                                     </div>
                                 </div>
                             </a>
@@ -60,8 +63,38 @@ export default {
   name: 'Movie',
   data () {
     return {
-      msg: ''
+      movieList:{},
+      commingList:{},
+      selectType:0
     }
+  },
+  methods:{
+      selectTypeFn(type){
+          this.selectType = type
+      },
+      
+  },
+  created(){
+    //正在热映
+    fetch("/api/movie_now")
+    .then(res => {
+        return res.json()
+    })
+    .then(response =>{
+
+        this.movieList = response.movieList
+        // console.log(this.movieList)
+    })
+    //即将上映
+    fetch("/api/movie_will")
+    .then(res => {
+        return res.json()
+    })
+    .then(response =>{
+        this.commingList = response.coming
+        // console.log(this.movieList)
+    })
+ 
   }
 }
 </script>
@@ -70,9 +103,9 @@ export default {
 /*电影开始*/
 .l_movie_tab_content{margin-bottom: 1.31rem}
 .l_tab_nav li{padding: 0;display: table-cell;}
-.l_tab_nav li.active a,
-.l_tab_nav li:hover a,
-.l_tab_nav li:focus a{color: #e64239;border-bottom: 2px solid #e64239}
+.l_tab_nav li a.active,
+.l_tab_nav li a:hover,
+.l_tab_nav li a:focus{color: #e64239;border-bottom: 2px solid #e64239}
 .l_tab_nav li a{padding: 0 0.533rem;display: inline-block;color: #999999;line-height: 1.066rem;}
 .l_mover_list_ul li{display: inline-block;padding: .25rem;border-bottom: 1px solid #f0f0f0;width: 100%;position: relative;box-sizing: border-box;}
 .l_mover_img{width: 2.2rem;height:2.95rem;display: block;float: left;position: relative;}
