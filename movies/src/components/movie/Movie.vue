@@ -116,5 +116,7 @@ export default {
 .l_mover_buy{position:absolute;right:10px;top:15px;font-size:.3381rem;line-height:.6rem;color:#fff;background-color:#e64239;border-radius:10rem;display:inline-block;width:1.2rem;text-align: center}
 .l_mover_presale{position:absolute;right:10px;top:15px;font-size:.3381rem;line-height:.6rem;color:#fff;background-color:#b08c4a;border-radius:10rem;display:inline-block;width:1.2rem;text-align: center}
 .l_mover_right p{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;line-height: .7rem;}
+.l_tab_ul{position:fixed;z-index: 99;width:100%;background:#FFF;}
+.l_tab_cont{padding-top:1.2rem}
 /*电影结束*/
 </style>

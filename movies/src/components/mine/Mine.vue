@@ -7,7 +7,7 @@
 				</div>
 				<div class="d_my_con_c">
 					<!-- 电影票 start -->
-					<div class="d_my_con_c_item d_por">
+					<div class="d_my_con_c_item d_por" @click="handjump('/myorder')">
 						<span class="d_my_con_c_item_l d_poa d_my_con_icon01"></span>
 						<div class="d_my_con_c_item_c d_ov_hi">
 							<h2 class="d_my_con_c_item_c_h2 d_ov_hi">电影票</h2>
@@ -48,7 +48,13 @@ export default {
     return {
       msg: ''
     }
-  }
+  },
+	methods:{
+		//点击跳转
+		handjump(type){
+			this.$router.push(type)
+		}
+	}
 }
 </script>
 

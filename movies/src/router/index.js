@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Movie from '@/components/Movie/Movie'
 import Cinema from '@/components/Cinema/Cinema'
 import Mine from '@/components/Mine/Mine'
+import MyOrder from '@/components/mine/myorder/MyOrder'
+
 
 Vue.use(Router)
 
@@ -23,11 +25,11 @@ export default new Router({
       name: 'Mine',
       component: Mine
     },
-    // {
-    //   path: '/',
-    //   name: 'Mine',
-    //   component: Mine
-    // }
+    {
+      path: '/myorder',
+      name: 'MyOrder',
+      component: MyOrder
+    }
   ],
   linkActiveClass:"selected"
 })
