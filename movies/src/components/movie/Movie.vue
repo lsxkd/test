@@ -10,7 +10,7 @@
                 <div class="over" v-show="selectType==0">
                     <ul class="list-unstyled l_mover_list_ul">
                         <li v-for="(movie,index) in movieList" :key="index">
-                            <a href="javascript:;">
+                            <a href="javascript:;" @click="handjump('/datailmovie')">
                                 <div class="l_mover_img"><img :src="movie.img" ></div>
                                 <div class="l_mover_right">
                                     <div class="l_flex_item">
@@ -25,7 +25,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="javascript:;" class="l_mover_buy">购票</a>
+                            <a href="javascript:;" class="l_mover_buy" @click="handjump('/datailmovie')">购票</a>
                         </li>
                        
                     </ul>
@@ -69,13 +69,17 @@ export default {
     }
   },
   methods:{
-      selectTypeFn(type){
-          this.selectType = type
-      },
+        selectTypeFn(type){
+            this.selectType = type
+        },
+        //点击跳转
+        handjump(type){
+            this.$router.push(type)
+        }
       
   },
   created(){
-    //正在热映
+    //正在热映  
     fetch("/api/movie_now")
     .then(res => {
         return res.json()

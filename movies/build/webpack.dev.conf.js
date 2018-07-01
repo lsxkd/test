@@ -27,6 +27,10 @@ var cinema = require("../data/cinema.json")
 var filter_cinemas = require("../data/filter_cinemas.json")
 var cities = require("../data/cities.json")  
 var my_order_list = require("../data/my_order_list.json")
+var my_coupon_list = require("../data/my_coupon_list.json")
+var detail_movie = require("../data/detail_movie.json")
+
+
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -80,6 +84,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       })
       app.get('/api/my_order_list',(req,res) => {
         res.json(my_order_list)
+      })
+      app.get('/api/my_coupon_list',(req,res) => {
+        res.json(my_coupon_list)
+      })
+      app.get('/api/detail_movie',(req,res) => {
+        res.json(detail_movie)
       })
     }
   },

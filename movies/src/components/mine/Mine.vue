@@ -10,7 +10,7 @@
 					<div class="d_my_con_c_item d_por" @click="handjump('/myorder')">
 						<span class="d_my_con_c_item_l d_poa d_my_con_icon01"></span>
 						<div class="d_my_con_c_item_c d_ov_hi">
-							<h2 class="d_my_con_c_item_c_h2 d_ov_hi">电影票</h2>
+							<h2 class="d_my_con_c_item_c_h2 d_ov_hi">我的电影票订单</h2>
 						</div>
 						<span class="d_my_con_c_item_r d_poa"></span>
 					</div>
@@ -26,15 +26,15 @@
 					</div>
 					<!-- 点评 end -->
 
-					<!-- 通票 start -->
-					<div class="d_my_con_c_item d_por">
+					<!-- 优惠券 start -->
+					<div class="d_my_con_c_item d_por" @click="handjump('/mycoupon')">
 						<span class="d_my_con_c_item_l d_poa d_my_con_icon03"></span>
 						<div class="d_my_con_c_item_c d_ov_hi">
-							<h2 class="d_my_con_c_item_c_h2 d_ov_hi">通票</h2>
+							<h2 class="d_my_con_c_item_c_h2 d_ov_hi">优惠券</h2>
 						</div>
 						<span class="d_my_con_c_item_r d_poa"></span>
 					</div>
-					<!-- 通票 end -->
+					<!-- 优惠券 end -->
 
 				</div>
 			</div>

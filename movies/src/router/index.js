@@ -4,6 +4,10 @@ import Movie from '@/components/Movie/Movie'
 import Cinema from '@/components/Cinema/Cinema'
 import Mine from '@/components/Mine/Mine'
 import MyOrder from '@/components/mine/myorder/MyOrder'
+import MyCoupon from '@/components/mine/mycoupon/MyCoupon'
+import DatailMovie from '@/components/movie/datailmovie/DatailMovie'
+
+
 
 
 Vue.use(Router)
@@ -29,7 +33,18 @@ export default new Router({
       path: '/myorder',
       name: 'MyOrder',
       component: MyOrder
-    }
+    },
+    {
+      path: '/mycoupon',
+      name: 'MyCoupon',
+      component: MyCoupon
+    },
+    {
+      path: '/datailmovie',
+      name: 'DatailMovie',
+      component: DatailMovie
+    },
+
   ],
   linkActiveClass:"selected"
 })

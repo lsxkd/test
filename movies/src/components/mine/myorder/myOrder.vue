@@ -12,17 +12,24 @@
                         <div class="l_mover_right">
                             <div class="l_flex_item">
                                 <div class="l_mover_name">
-                                    {{items.movie.name}}
+                                    {{items.movie.name}}  {{items.seats.count}}张
                                 </div>
-                                <p class="rfs14 c_666">观众评分 <span class="c_ff9 rfs16 v-align-initial">8.9</span></p>
-                                <p class="rfs14 c_999">动作/冒险/喜剧</p>
-                                <p class="rfs14 c_999">主演：克里斯·海姆斯沃斯,汤姆·希德勒斯顿,凯...</p>
+                                <!-- <p class="rfs14 c_666">观众评分 <span class="c_ff9 rfs16 v-align-initial">8.9</span></p> -->
+                                <p class="rfs14 c_999">{{items.show.language}} {{items.show.dim}}</p>
+                                <p class="rfs14 c_999">{{items.show.showTime}}</p>
+                                <p class="rfs14 c_999" v-if="items.seats.list">
+                                    {{items.seats.hallName}}
+                                    <span v-for="(list,indexs) in items.seats.list" :key="indexs" v-if="items.seats.list">
+                                        {{list.rowId}}排{{list.columnId}}号
+                                    </span>
+                                </p>
+                                
                             </div>
                         </div>
                     </a>
                     <div class="order-more  mb-line-t">
-                        <div class="commons price">总价：<span>56元</span></div>
-                        <div class="commons status">已完成</div>
+                        <div class="commons price">总价：<span>{{items.order.sellMoney}}元</span></div>
+                        <div class="commons status">{{items.otherStatus}}</div>
                     </div>
                 </li>
             </ul>
@@ -34,7 +41,7 @@
 <script>
 import Header from '@/components/header/header'
 export default {
-  name: 'Nav',
+  name: 'MyOrder',
   data () {
     return {
       msg: '',
@@ -49,7 +56,7 @@ export default {
 
   },
   created(){
-      console.log(this.headerData)
+    //   console.log(this.headerData)
       //我的订单列表
     fetch("/api/my_order_list")
     .then(res => {
@@ -57,7 +64,7 @@ export default {
     })
     .then(response =>{
         this.myOrderList = response.orderlist
-        console.log(this.myOrderList)
+        // console.log(this.myOrderList)
     })
   },
 }
@@ -121,5 +128,8 @@ export default {
 .order-more .status {
     color: #333;
     float: right;
+}
+.myorder{
+    padding-bottom:1.31rem;
 }
 </style>
