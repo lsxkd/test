@@ -5,7 +5,7 @@
         <div class="l_movie_data_cont">
             <div class="l_data_show_item">
                 <div class="l_data_movie_cover">
-                    <a href="">
+                    <a href="javascript:;">
                         <img :src="datailMovie.img" alt="">
                     </a>
                 </div>
@@ -49,10 +49,11 @@
             </div>
             <div class="bg_fff rpd15 rmb5">
                 <div class="rfs18 c_666 rmb10">海报和预告片 
-                    <a href="" class="pull-right c_999 rfs14 inline-block rline26">视频{{datailMovie.vnum}}&nbsp;&nbsp;|&nbsp;&nbsp;图片{{datailMovie.pn}}</a></div>
+                    <a href="javascript:;" class="pull-right c_999 rfs14 inline-block rline26">视频{{datailMovie.vnum}}&nbsp;&nbsp;|&nbsp;&nbsp;图片{{datailMovie.pn}}</a>
+                </div>
                 <ul class="list-unstyled l_data_movie_stages">
                     <li class="movie">
-                        <a href="javascript:;">
+                        <a :href="datailMovie.videourl">
                             <div class="l_data_stages_img amg">
                                 <img :src="datailMovie.videoImg" alt="">
                             </div>
@@ -70,64 +71,34 @@
             </div>
 
             <div class="bg_fff rpd15 rmb5">
-                <div class="rfs18 c_666">影评 <a href="" class="pull-right l_btn l_red_bor_btn bo_r4">写评论</a></div>
+                <div class="rfs18 c_666">影评 <a href="javascript:;" class="pull-right l_btn l_red_bor_btn bo_r4">写评论</a></div>
             </div>
             <div class="l_show_comments_list rpl15 bg_fff">
-                <div class="l_show_li re rpt10 solid_b">
-                    <div class="l_show_user_img"><img :src="datailMovie.img" alt=""></div>
-                    <dl>
-                        <dt>
-                            <div class="rfs14">wsd999</div>
-                            <div class="over rmt5">
-                                <div class="l_show_star_ranking">
-                                    <div class="l_show_star_ranking_light" style="width: 73%;"></div>
-                                </div>
-                                <span class="rml10 c_999 rfs12 pull-left">1小时前</span>
-                            </div>
-                        </dt>
-                        <dd>
-                            <div class="rfs14 rline24 rmt10 c_262">
-                                正义联盟里面就是为了要讲他们的故事，为什么用套用漫威的路子啊？神奇女侠电影登场也是因为在BVS里面的预热才有如此高的期待值，先把世界观介绍清楚了有谁之后，再来拍SOLO，你相信路人当初会知道，钢铁侠，美队，雷神以后会在同一部电影里出现吗？DC的电影里也是有故事时间线的，你以为跟漫威一样，只为了把他们凑齐连故事的前后时间线都不管了。
-                            </div>
 
-                        </dd>
-                    </dl>
-                </div>
-                <div class="l_show_li re rpt10 solid_b">
-                    <div class="l_show_user_img"><img src="images/l_data_name_img.png" alt=""></div>
+                <div class="l_show_li re rpt10 solid_b" v-for="(comment,index) in commentList" :key="index">
+                    <div class="l_show_user_img"><img :src="comment.avatarurl" alt=""></div>
                     <dl>
                         <dt>
-                            <div class="rfs14">wsd999</div>
+                            <div class="rfs14">{{comment.nickName}}</div>
                             <div class="over rmt5">
-                                <div class="l_show_star_ranking">
+                                <!-- <div class="l_show_star_ranking">
                                     <div class="l_show_star_ranking_light" style="width: 73%;"></div>
-                                </div>
-                                <span class="rml10 c_999 rfs12 pull-left">1小时前</span>
+                                </div> -->
+                                <div class="d_comments_item_r_t_d d_clearfix">
+									<div class="d_comments_item_info_l d_fl">
+										<span class="icon_stars active" v-for="(star,index) in 5" v-if='index < comment.score' :key="index"></span><!-- 去除空格
+									 --><span class="icon_stars" v-for="(starNo,indexs) in 5" v-if='indexs < 5 - comment.score' :key="'l' + indexs"></span>
+									</div>
+									<div class="d_comments_item_info_r d_fl d_ov_hi">
+										<span>{{comment.time}}</span>
+									</div>
+								</div>
+                                <!-- <span class="rml10 c_999 rfs12 pull-left">{{comment.time}}</span> -->
                             </div>
                         </dt>
                         <dd>
                             <div class="rfs14 rline24 rmt10 c_262">
-                                正义联盟里面就是为了要讲他们的故事，为什么用套用漫威的路子啊？神奇女侠电影登场也是因为在BVS里面的预热才有如此高的期待值.
-                            </div>
-
-                        </dd>
-                    </dl>
-                </div>
-                <div class="l_show_li re rpt10 solid_b">
-                    <div class="l_show_user_img"><img src="images/l_data_name_img.png" alt=""></div>
-                    <dl>
-                        <dt>
-                            <div class="rfs14">wsd999</div>
-                            <div class="over rmt5">
-                                <div class="l_show_star_ranking">
-                                    <div class="l_show_star_ranking_light" style="width: 73%;"></div>
-                                </div>
-                                <span class="rml10 c_999 rfs12 pull-left">1小时前</span>
-                            </div>
-                        </dt>
-                        <dd>
-                            <div class="rfs14 rline24 rmt10 c_262">
-                                正义联盟里面就是为了要讲他们的故事，为什么用套用漫威的路子啊？神奇女侠电影登场也是因为在BVS里面的预热才有如此高的期待值，先把世界观介绍清楚了有谁之后，再来拍SOLO，你相信路人当初会知道，钢铁侠，美队，雷神以后会在同一部电影里出现吗？DC的电影里也是有故事时间线的，你以为跟漫威一样，只为了把他们凑齐连故事的前后时间线都不管了。
+                                {{comment.content}}
                             </div>
 
                         </dd>
@@ -135,10 +106,10 @@
                 </div>
             </div>
             <div class="text-center bg_fff rfs14 rmb10">
-                <a href="" class="db c_262 rpt10 rpb10">查看全部评价 <i class="iconfont icon-icon1"></i></a>
+                <a href="javascript:;" class="db c_262 rpt10 rpb10">查看全部评价 <i class="iconfont icon-icon1"></i></a>
             </div>
             <div class="rpd15 rpt10 rpt10 bg_fff">
-                <a href="" class="l_btn_block l_red_bg_btn bo_r4">立即购票</a>
+                <a href="javascript:;" class="l_btn_block l_red_bg_btn bo_r4">立即购票</a>
             </div>
         </div>
     </div>
@@ -151,7 +122,8 @@ export default {
   name: 'DatailMovie',
   data () {
     return {
-      datailMovie:"",
+      datailMovie:"",  //电影详情
+      commentList:"",  //评论列表
       headerData:{"name":"动物世界"}, //头部信息
     }
   },
@@ -168,6 +140,16 @@ export default {
 
         this.datailMovie = response.detailMovie
         console.log(this.datailMovie)
+    })
+    //评论列表  
+    fetch("/api/comment_list")
+    .then(res => {
+        return res.json()
+    })
+    .then(response =>{
+
+        this.commentList = response.hcmts
+        console.log(this.commentList)
     })
   },
 }
@@ -291,5 +273,66 @@ export default {
 .amg img{
     height:100%;
 }
+.d_comments_item_r_t_d {
+    height: 0.5rem;
+    line-height: 0.5rem;
+}
+.d_comments_item_info_l {
+    height: 0.5rem;
+    line-height: 0.5rem;
+    font-size:0;
+}
+.d_fl {
+    float: left;
+}
+.d_clearfix {
+    zoom: 1;
+}
+span.icon_stars {
+    display: inline-block;
+    width: 0.267rem;
+    height: 0.267rem;
+    background: url(./img/d_icon_xingxing_small_g.png) no-repeat center center/100% 100%;
+    padding: 0;
+    margin: 0 0.05rem;
+    vertical-align: middle;
+}
+span.icon_stars.active {
+    background: url(./img/d_icon_xingxing_small_y.png) no-repeat center center/100% 100%;
+}
+.d_comments_item_info_r {
+    margin-left: 0.3rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    vertical-align: middle;
+}
+.d_ov_hi {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0;
+}
+.d_comments_item_info_r span {
+    color: #999999;
+    font-size: 0.267rem;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*电影详情结束*/
 </style>

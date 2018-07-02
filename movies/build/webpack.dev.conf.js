@@ -29,6 +29,7 @@ var cities = require("../data/cities.json")
 var my_order_list = require("../data/my_order_list.json")
 var my_coupon_list = require("../data/my_coupon_list.json")
 var detail_movie = require("../data/detail_movie.json")
+var comment_list = require("../data/comment_list.json")
 
 
 
@@ -90,6 +91,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       })
       app.get('/api/detail_movie',(req,res) => {
         res.json(detail_movie)
+      })
+      app.get('/api/comment_list',(req,res) => {
+        res.json(comment_list)
       })
     }
   },
