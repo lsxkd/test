@@ -102,7 +102,7 @@
 			<div class="blacker" v-show="navsType > -1" @click="closePops()"></div>
 			<div class="cinema-list">
 				<div class="list-wrap">
-					<div class="item mb-line-b" v-for="(cinema,index) in cinema_list" :key="index">
+					<div class="item mb-line-b" v-for="(cinema,index) in cinema_list" :key="index" @click="handjump('/cinemadetail')">
 						<div class="title-block box-flex middle">
 							<div class="title line-ellipsis">
                                 <span>{{cinema.nm}}</span>

@@ -30,6 +30,7 @@ var my_order_list = require("../data/my_order_list.json")
 var my_coupon_list = require("../data/my_coupon_list.json")
 var detail_movie = require("../data/detail_movie.json")
 var comment_list = require("../data/comment_list.json")
+var cinema_detail = require("../data/cinema_detail.json")
 
 
 
@@ -94,6 +95,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       })
       app.get('/api/comment_list',(req,res) => {
         res.json(comment_list)
+      })
+      app.get('/api/cinema_detail',(req,res) => {
+        res.json(cinema_detail)
       })
     }
   },

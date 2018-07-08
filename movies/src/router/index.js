@@ -6,7 +6,7 @@ import Mine from '@/components/Mine/Mine'
 import MyOrder from '@/components/mine/myorder/MyOrder'
 import MyCoupon from '@/components/mine/mycoupon/MyCoupon'
 import DatailMovie from '@/components/movie/datailmovie/DatailMovie'
-
+import CinemaDetail from '@/components/cinema/cinemadetail/CinemaDetail'
 
 
 
@@ -43,6 +43,11 @@ export default new Router({
       path: '/datailmovie',
       name: 'DatailMovie',
       component: DatailMovie
+    },
+    {
+      path: '/cinemadetail',
+      name: 'CinemaDetail',
+      component: CinemaDetail
     },
 
   ],
