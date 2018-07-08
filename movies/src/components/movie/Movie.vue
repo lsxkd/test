@@ -25,7 +25,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="javascript:;" class="l_mover_buy" @click="handjump('/datailmovie')">购票</a>
+                            <a href="javascript:;" class="l_mover_buy" @click="handjump('/cinema')">购票</a>
                         </li>
                        
                     </ul>

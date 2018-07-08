@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import util from '../src/utils/util.js'  //公共方法
+
+Vue.use(util)
 Vue.config.productionTip = false
 
 Vue.prototype.bus = new Vue

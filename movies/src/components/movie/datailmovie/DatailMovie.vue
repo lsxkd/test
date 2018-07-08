@@ -108,7 +108,7 @@
             <div class="text-center bg_fff rfs14 rmb10">
                 <a href="javascript:;" class="db c_262 rpt10 rpb10">查看全部评价 <i class="iconfont icon-icon1"></i></a>
             </div>
-            <div class="rpd15 rpt10 rpt10 bg_fff">
+            <div class="rpd15 rpt10 rpt10 bg_fff" @click="handjump('/cinema')">
                 <a href="javascript:;" class="l_btn_block l_red_bg_btn bo_r4">立即购票</a>
             </div>
         </div>
